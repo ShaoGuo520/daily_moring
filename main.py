@@ -29,8 +29,7 @@ def get_weather():
 
   return weather['weather'], math.floor(weather['temp'])
 
-
-  def get_weather_high():
+def get_weather_high():
     return weather['weather'], math.floor(weather['high'])
 
 
