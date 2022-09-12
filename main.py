@@ -1,4 +1,5 @@
-from datetime import date, datetime
+from datetime import date
+import datetime
 import math
 from wechatpy import WeChatClient
 from wechatpy.client.api import WeChatMessage, WeChatTemplate
@@ -8,7 +9,7 @@ import random
 
 today = datetime.now()
 
-today1 = datetime.date.today()
+today1 =datetime.date.today()
 
 today2=today1.year+"年"+today1.month+"月"+today1.day+"日"
 
