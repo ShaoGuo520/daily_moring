@@ -59,7 +59,7 @@ def get_random_color():
 
 client = WeChatClient(app_id, app_secret)
 
-wm = WeChatMessage(client
+wm = WeChatMessage(client)
 wea, temperature = get_weather()
 data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"data":{"value":today2},"high":{"value":get_weather_high()},"low":{"value":get_weather_low()},"birthday_left":{"value":get_birthday()},"love_words":{"value":get_words(), "color":get_random_color()}}
 res = wm.send_template(user_id, template_id, data)
