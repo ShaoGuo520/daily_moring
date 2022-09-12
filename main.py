@@ -1,17 +1,16 @@
-from datetime import date
-import datetime
+from datetime import date,datetime
 import math
 from wechatpy import WeChatClient
 from wechatpy.client.api import WeChatMessage, WeChatTemplate
 import requests
 import os
 import random
+import time
 
-today = datetime.datetime.now()
+today = datetime.now()
 
-today1 =datetime.date.today()
 
-today2=today1.year+"年"+today1.month+"月"+today1.day+"日"
+today2=time.strftime('%Y年%m月%d日', time.localtime(time.time()))   # 格式化获取日期
 
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
