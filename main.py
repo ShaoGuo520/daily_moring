@@ -7,7 +7,7 @@ import requests
 import os
 import random
 
-today = datetime.now()
+today = datetime.datetime.now()
 
 today1 =datetime.date.today()
 
