@@ -25,7 +25,7 @@ url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientTy
 res = requests.get(url).json()
 weather = res['data']['list'][0]
 
-url1="https://devapi.qweather.com/v7/indices/1d?type=3&location=101200101&key=58b926307bff4feab08517fbecb38796https://devapi.qweather.com/v7/indices/1d?type=3&location=101200101&key=58b926307bff4feab08517fbecb38796";
+url1="https://devapi.qweather.com/v7/indices/1d?type=3&location=101200101&key=58b926307bff4feab08517fbecb38796";
 res1 = requests.get(url1).json()
 zs=res1['daily'][0]['text']
 
