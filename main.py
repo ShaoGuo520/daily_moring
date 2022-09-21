@@ -35,7 +35,7 @@ zs=res1['daily'][0]['text']
 
 def get_weather():
 
-  return weather['weather'], math.floor(weather['temp']),math.floor(weather['high']),math.floor(weather['low']),weather['date'],
+  return weather['weather'], math.floor(weather['temp']),math.floor(weather['high']),math.floor(weather['low']),weather['date']
 
 
 
