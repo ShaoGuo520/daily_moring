@@ -25,6 +25,14 @@ url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientTy
 res = requests.get(url).json()
 weather = res['data']['list'][0]
 
+url1="https://devapi.qweather.com/v7/indices/1d?type=3&location=101200101&key=58b926307bff4feab08517fbecb38796https://devapi.qweather.com/v7/indices/1d?type=3&location=101200101&key=58b926307bff4feab08517fbecb38796";
+res1 = requests.get(url).json()
+zs=res1['daily'][0]['text']
+
+
+
+
+
 def get_weather():
 
   return weather['weather'], math.floor(weather['temp']),math.floor(weather['high']),math.floor(weather['low']),
@@ -56,7 +64,7 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 wea, temperature,high,low = get_weather()
-data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"date":{"value":today2},"high":{"value":high},"low":{"value":low},"city":{"value":city},"birthday_left":{"value":get_birthday()},"love_words":{"value":get_words(), "color":get_random_color()}}
-res = wm.send_template(user_id, template_id, data)
-res = wm.send_template("oPt8E58CkTlEHy80Xp7b7cwtIN-c", template_id, data)
+data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"date":{"value":today2},"high":{"value":high},"low":{"value":low},"city":{"value":city},"birthday_left":{"value":get_birthday()},"cy":{"value":zs},"love_words":{"value":get_words(), "color":get_random_color()}}
+res = wm.send_template(user_id, "VxHcRy1RE7BCPN_IL4wrxenjl37wU5RPchLLo8WFYXA", data)
+# res = wm.send_template("oPt8E58CkTlEHy80Xp7b7cwtIN-c", template_id, data)
 print(res)
